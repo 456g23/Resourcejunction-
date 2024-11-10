@@ -1,56 +1,131 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resource Junction</title>
+    <title>Welcome to Resource Junction</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for the sidebar and layout */
+        body {
+            display: flex;
+            flex-direction: row;
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: blue;
+        }
+        
+        nav {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-right: 1px solid #ddd;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        nav a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        #featured-products, #featured-services {
+            margin: 20px 0;
+        }
+
+        #product-list {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Resource Junction</h1>
-        <nav>
-            <a href="#" onclick="showCategory('all')">All</a>
-            <a href="#" onclick="showCategory('electronics')">Electronics</a>
-            <a href="#" onclick="showCategory('fashion')">Fashion</a>
-            <a href="#" onclick="showCategory('home_appliances')">Home Appliances</a>
-            <a href="#" onclick="showCategory('beauty_health')">Beauty & Health</a>
-            <a href="#" onclick="showCategory('sports_outdoors')">Sports & Outdoors</a>
-            <a href="#" onclick="showCategory('automotive')">Automotive</a>
-            <a href="#" onclick="showCategory('toys')">Toys</a>
-            <a href="#" onclick="showCategory('books')">Books</a>
-            <a href="#" onclick="showCategory('office_supplies')">Office Supplies</a>
-            <a href="#" onclick="showCategory('grocery')">Grocery</a>
-            <a href="#" onclick="showCategory('furniture')">Furniture</a>
-            <a href="#" onclick="showCategory('pet_supplies')">Pet Supplies</a>
-            <a href="#" onclick="showCategory('jewelry')">Jewelry</a>
-            <a href="#" onclick="showCategory('baby')">Baby Products</a>
-            <a href="#" onclick="showCategory('musical_instruments')">Musical Instruments</a>
-            <a href="#" onclick="showCategory('video_games')">Video Games</a>
-            <a href="#" onclick="showCategory('garden')">Garden & Outdoor</a>
-            <a href="#" onclick="showCategory('travel')">Travel & Luggage</a>
-            <a href="#" onclick="showCategory('real_estate')">Real Estate</a>
-            <a href="#" onclick="showCategory('services')">Services</a>
-            <a href="#" onclick="showCategory('betting')">Betting</a> <!-- New Betting category link -->
-        </nav>
-    </header>
+    <nav>
+        <h2>Categories</h2>
+        <a href="#" onclick="showCategory('all')">All</a>
+        <a href="#" onclick="showCategory('electronics')">Electronics</a>
+        <a href="#" onclick="showCategory('fashion')">Fashion</a>
+        <a href="#" onclick="showCategory('home_appliances')">Home Appliances</a>
+        <a href="#" onclick="showCategory('beauty_health')">Beauty & Health</a>
+        <a href="#" onclick="showCategory('sports_outdoors')">Sports & Outdoors</a>
+        <a href="#" onclick="showCategory('automotive')">Automotive</a>
+        <a href="#" onclick="showCategory('toys')">Toys</a>
+        <a href="#" onclick="showCategory('books')">Books</a>
+        <a href="#" onclick="showCategory('office_supplies')">Office Supplies</a>
+        <a href="#" onclick="showCategory('grocery')">Grocery</a>
+        <a href="#" onclick="showCategory('furniture')">Furniture</a>
+        <a href="#" onclick="showCategory('pet_supplies')">Pet Supplies</a>
+        <a href="#" onclick="showCategory('jewelry')">Jewelry</a>
+        <a href="#" onclick="showCategory('baby')">Baby Products</a>
+        <a href="#" onclick="showCategory('musical_instruments')">Musical Instruments</a>
+        <a href="#" onclick="showCategory('video_games')">Video Games</a>
+        <a href="#" onclick="showCategory('garden')">Garden & Outdoor</a>
+        <a href="#" onclick="showCategory('travel')">Travel & Luggage</a>
+        <a href="#" onclick="showCategory('real_estate')">Real Estate</a>
+        <a href="#" onclick="showCategory('services')">Services</a>
+        <a href="#" onclick="showCategory('betting')">Betting</a>
+    </nav>
 
-    <main id="product-list">
-        <!-- Other category sections -->
+    <main>
+        <header>
+            <h1>Welcome to Resource Junction</h1>
+            <p>Welcome to your online supermarket</p>
+        </header>
 
-        <!-- Betting Category Section -->
-        <section id="betting" style="display: none;">
-            <h2>Betting</h2>
+        <!-- Featured Products Section -->
+        <section id="featured-products">
+            <h2>Featured Products</h2>
             <ul>
-                <li><a href="https://bit.ly/3ygPnTP" target="_blank">Betway</a></li>
-                <li><a href="https://premierbetzone.com/static-start-page.html?AffiliateID=666802" target="_blank">Premier Bet Zone</a></li>
-                <li><a href="https://media.premierbetpartners.com/redirect.aspx?pid=114831&bid=5039" target="_blank">Premier Bet</a></li>
+                <li>Product 1</li>
+                <li>Product 2</li>
+                <li>Product 3</li>
             </ul>
         </section>
+
+        <!-- Featured Services Section -->
+        <section id="featured-services">
+            <h2>Featured Services</h2>
+            <ul>
+                <li>Service 1</li>
+                <li>Service 2</li>
+                <li>Service 3</li>
+            </ul>
+        </section>
+
+        <div id="product-list">
+            <!-- Other category sections -->
+
+            <!-- Betting Category Section -->
+            <section id="betting" style="display: none;">
+                <h2>Betting</h2>
+                <ul>
+                    <li><a href="https://bit.ly/3ygPnTP" target="_blank">Betway</a></li>
+                    <li><a href="https://premierbetzone.com/static-start-page.html?AffiliateID=666802" target="_blank">Premier Bet Zone</a></li>
+                    <li><a href="https://media.premierbetpartners.com/redirect.aspx?pid=114831&bid=5039" target="_blank">Premier Bet</a></li>
+                </ul>
+            </section>
+        </div>
     </main>
 
     <script src="script.js"></script>
 </body>
-              </html>
+            </html>
