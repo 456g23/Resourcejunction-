@@ -1,44 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resource Junction</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-    <header>
-        <h1>Resource Junction</h1>
-        <nav>
-            <a href="#" onclick="showCategory('all')">All</a>
-            <a href="#" onclick="showCategory('electronics')">Electronics</a>
-            <a href="#" onclick="showCategory('fashion')">Fashion</a>
-            <a href="#" onclick="showCategory('home_appliances')">Home Appliances</a>
-            <a href="#" onclick="showCategory('beauty_health')">Beauty & Health</a>
-            <a href="#" onclick="showCategory('sports_outdoors')">Sports & Outdoors</a>
-            <a href="#" onclick="showCategory('automotive')">Automotive</a>
-            <a href="#" onclick="showCategory('toys')">Toys</a>
-            <a href="#" onclick="showCategory('books')">Books</a>
-            <a href="#" onclick="showCategory('office_supplies')">Office Supplies</a>
-            <a href="#" onclick="showCategory('grocery')">Grocery</a>
-            <a href="#" onclick="showCategory('furniture')">Furniture</a>
-            <a href="#" onclick="showCategory('pet_supplies')">Pet Supplies</a>
-            <a href="#" onclick="showCategory('jewelry')">Jewelry</a>
-            <a href="#" onclick="showCategory('baby')">Baby Products</a>
-            <a href="#" onclick="showCategory('musical_instruments')">Musical Instruments</a>
-            <a href="#" onclick="showCategory('video_games')">Video Games</a>
-            <a href="#" onclick="showCategory('garden')">Garden & Outdoor</a>
-            <a href="#" onclick="showCategory('travel')">Travel & Luggage</a>
-            <a href="#" onclick="showCategory('real_estate')">Real Estate</a>
-            <a href="#" onclick="showCategory('services')">Services</a>
-        </nav>
-    </header>
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
 
-    <main id="product-list">
-        <!-- Products will be dynamically injected here -->
-    </main>
+header h1 {
+    margin: 0;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-item h3 {
+    font-size: 1.1em;
+    margin: 10px 0 5px;
+}
+
+.product-item p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.product-item button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-item button:hover {
+    background-color: #218838;
+}
