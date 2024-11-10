@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Junction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Resource Junction</h1>
+        <nav>
+            <a href="#" onclick="showCategory('all')">All</a>
+            <a href="#" onclick="showCategory('electronics')">Electronics</a>
+            <a href="#" onclick="showCategory('fashion')">Fashion</a>
+            <a href="#" onclick="showCategory('home_appliances')">Home Appliances</a>
+            <a href="#" onclick="showCategory('beauty_health')">Beauty & Health</a>
+            <a href="#" onclick="showCategory('sports_outdoors')">Sports & Outdoors</a>
+            <a href="#" onclick="showCategory('automotive')">Automotive</a>
+            <a href="#" onclick="showCategory('toys')">Toys</a>
+            <a href="#" onclick="showCategory('books')">Books</a>
+            <a href="#" onclick="showCategory('office_supplies')">Office Supplies</a>
+            <a href="#" onclick="showCategory('grocery')">Grocery</a>
+            <a href="#" onclick="showCategory('furniture')">Furniture</a>
+            <a href="#" onclick="showCategory('pet_supplies')">Pet Supplies</a>
+            <a href="#" onclick="showCategory('jewelry')">Jewelry</a>
+            <a href="#" onclick="showCategory('baby')">Baby Products</a>
+            <a href="#" onclick="showCategory('musical_instruments')">Musical Instruments</a>
+            <a href="#" onclick="showCategory('video_games')">Video Games</a>
+            <a href="#" onclick="showCategory('garden')">Garden & Outdoor</a>
+            <a href="#" onclick="showCategory('travel')">Travel & Luggage</a>
+            <a href="#" onclick="showCategory('real_estate')">Real Estate</a>
+            <a href="#" onclick="showCategory('services')">Services</a>
+        </nav>
+    </header>
+
+    <main id="product-list">
+        <!-- Products will be dynamically injected here -->
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
