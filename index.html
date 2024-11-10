@@ -48,12 +48,12 @@
             padding: 20px;
         }
 
-        #featured-products, #featured-services {
-            margin: 20px 0;
+        section {
+            display: none; /* Hide all sections by default */
         }
 
-        #product-list {
-            margin-top: 20px;
+        .visible {
+            display: block; /* Display sections with the class "visible" */
         }
     </style>
 </head>
@@ -91,31 +91,29 @@
             <p>Welcome to your online supermarket</p>
         </header>
 
-        <!-- Featured Products Section -->
-        <section id="featured-products">
-            <h2>Featured Products</h2>
-            <ul>
-                <li>Product 1</li>
-                <li>Product 2</li>
-                <li>Product 3</li>
-            </ul>
-        </section>
-
-        <!-- Featured Services Section -->
-        <section id="featured-services">
-            <h2>Featured Services</h2>
-            <ul>
-                <li>Service 1</li>
-                <li>Service 2</li>
-                <li>Service 3</li>
-            </ul>
-        </section>
-
         <div id="product-list">
-            <!-- Other category sections -->
+            <!-- Electronics Category Section -->
+            <section id="electronics">
+                <h2>Electronics</h2>
+                <ul>
+                    <li>Electronics Product 1</li>
+                    <li>Electronics Product 2</li>
+                    <li>Electronics Product 3</li>
+                </ul>
+            </section>
+
+            <!-- Fashion Category Section -->
+            <section id="fashion">
+                <h2>Fashion</h2>
+                <ul>
+                    <li>Fashion Product 1</li>
+                    <li>Fashion Product 2</li>
+                    <li>Fashion Product 3</li>
+                </ul>
+            </section>
 
             <!-- Betting Category Section -->
-            <section id="betting" style="display: none;">
+            <section id="betting">
                 <h2>Betting</h2>
                 <ul>
                     <li><a href="https://bit.ly/3ygPnTP" target="_blank">Betway</a></li>
@@ -123,9 +121,32 @@
                     <li><a href="https://media.premierbetpartners.com/redirect.aspx?pid=114831&bid=5039" target="_blank">Premier Bet</a></li>
                 </ul>
             </section>
+
+            <!-- Other categories can be added similarly -->
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script>
+        function showCategory(category) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('visible');
+            });
+
+            // Show specific section or all sections
+            if (category === 'all') {
+                sections.forEach(section => section.classList.add('visible'));
+            } else {
+                const selectedSection = document.getElementById(category);
+                if (selectedSection) {
+                    selectedSection.classList.add('visible');
+                }
+            }
+        }
+
+        // Show all categories by default on page load
+        document.addEventListener('DOMContentLoaded', () => showCategory('all'));
+    </script>
 </body>
-            </html>
+    </html>
